@@ -5,42 +5,51 @@ const experiences = [
     role: "iOS Developer",
     period: "2023 – Present",
     details: [
-      "Developing new Features and enhancing Wondr by BNI app, a large-scale banking application.",
-      "Responsible as sub-lead of PGLS (Post Go-Live Support) iOS team, improving production stability and resolving incidents by handling Crashlytics issues, and production bugs.",
-      "Implementing VIPER to maintain modular, better scalability, and testable architecture.",
-    ]
+      "Developing new features and enhancing Wondr by BNI app, a large-scale banking application.",
+      "Sub-lead of PGLS iOS team — improving production stability, handling Crashlytics issues and production bugs.",
+      "Implementing VIPER for modular, scalable, and testable architecture.",
+    ],
+    highlight: true,
   },
   {
     company: "PT PHINCON",
     role: "iOS Developer",
     period: "2022 – 2023",
     details: [
-      "Delivered new features and enhancements from MVC to MVVM and RxSwift.",
+      "Delivered features and migrated from MVC to MVVM with RxSwift.",
       "Increased unit test coverage to 80% for business logic.",
       "Integrated Google Analytics for data-driven decisions.",
-    ]
-  }
+    ],
+    highlight: false,
+  },
 ];
 ---
 
 <section id="experience" class="scroll-anim">
-  <div class="section-panel">
-    <h2 class="text-4xl font-bold mb-12 text-custom-white/90">Experience</h2>
-    <div class="flex flex-col gap-12">
-      {experiences.map((exp) => (
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div class="md:col-span-1">
-            <h3 class="text-lg font-semibold text-custom-white">{exp.company}</h3>
-            <p class="text-custom-gray">{exp.period}</p>
+  <h2 class="text-sm tracking-[0.3em] uppercase text-custom-gray mb-8 font-light">Experience</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {experiences.map((exp) => (
+      <div class:list={[
+        "glass-panel p-6 flex flex-col",
+        exp.highlight && "md:col-span-2"
+      ]}>
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h3 class="text-xl font-semibold text-custom-white">{exp.role}</h3>
+            <p class="text-custom-gray text-sm mt-1">{exp.company}</p>
           </div>
-          <div class="md:col-span-3">
-            <h4 class="text-xl font-bold text-custom-white/80">{exp.role}</h4>
-            <ul class="list-disc pl-5 mt-2 space-y-2 text-custom-white/70">
-              {exp.details.map(detail => <li>{detail}</li>)}
-            </ul>
-          </div>
+          <span class="text-custom-gray text-sm whitespace-nowrap ml-4">{exp.period}</span>
         </div>
-      ))}
-    </div>
+        <ul class="space-y-2 text-custom-white/70 text-sm leading-relaxed">
+          {exp.details.map((detail) => (
+            <li class="flex gap-2">
+              <span class="text-custom-gray/50 mt-1 shrink-0">·</span>
+              <span>{detail}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
   </div>
 </section>
