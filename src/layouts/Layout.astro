@@ -27,7 +27,9 @@ const { title } = Astro.props;
     <div class="ambient-orb" style="width: 500px; height: 500px; background: rgba(109, 40, 217, 0.1); top: 30%; right: -15%; animation-delay: -7s;"></div>
     <div class="ambient-orb" style="width: 400px; height: 400px; background: rgba(30, 64, 175, 0.08); bottom: 10%; left: 20%; animation-delay: -13s;"></div>
 
-    <slot />
+    <div class="flex flex-col">
+      <slot />
+    </div>
 
     <script type="module" src="/src/scripts/animations.js"></script>
     <script type="module" src="/src/scripts/tilt.js"></script>

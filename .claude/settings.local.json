@@ -6,7 +6,10 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(npx astro *)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "Bash(curl -s http://localhost:4321)"
     ]
   }
 }

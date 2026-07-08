@@ -8,13 +8,15 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Ade Reskita — Principal iOS Engineer">
-  <Header />
+  <div class="relative z-10">
+    <Header />
 
-  <main class="flex flex-col gap-0">
-    <Experience />
-    <Projects />
-    <Education />
-  </main>
+    <main class="flex flex-col gap-0">
+      <Experience />
+      <Projects />
+      <Education />
+    </main>
 
-  <Footer />
+    <Footer />
+  </div>
 </Layout>
