@@ -1,9 +1,13 @@
 ---
-const { label, icon, target } = Astro.props;
+interface Props {
+  emoji: string;
+  size?: 'sm' | 'md';
+}
+
+const { emoji, size = 'md' } = Astro.props;
+const sizeClasses = size === 'sm' ? 'w-12 h-12 text-2xl rounded-xl' : 'w-16 h-16 text-3xl rounded-2xl';
 ---
-<a href={target} class="flex flex-col items-center gap-2 text-center transition-transform hover:scale-110">
-  <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center text-4xl shadow-lg">
-    <Fragment set:html={icon} />
-  </div>
-  <span class="text-sm font-medium">{label}</span>
-</a>
+
+<div class:list={["glass-panel flex items-center justify-center shrink-0", sizeClasses]}>
+  <span>{emoji}</span>
+</div>

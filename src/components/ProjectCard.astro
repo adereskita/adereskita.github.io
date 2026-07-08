@@ -1,12 +1,35 @@
 ---
-const { title, description, imgSrc } = Astro.props;
+import AppIcon from './AppIcon.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  emoji: string;
+  tags: string[];
+}
+
+const { title, description, emoji, tags } = Astro.props;
 ---
-<a href="#" class="group">
-  <div class="overflow-hidden rounded-lg">
-    <img src={imgSrc} alt={title} class="w-full h-auto aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" />
+
+<div class="glass-card p-6 relative overflow-hidden group cursor-default">
+  <!-- Glare overlay -->
+  <div class="glare"></div>
+
+  <!-- App icon + info -->
+  <div class="flex items-start gap-4 mb-4 relative z-10">
+    <AppIcon emoji={emoji} />
+    <div class="min-w-0">
+      <h3 class="text-xl font-semibold text-custom-white truncate">{title}</h3>
+      <p class="text-custom-gray text-sm mt-1 leading-relaxed">{description}</p>
+    </div>
   </div>
-  <div class="mt-4">
-    <h3 class="text-xl font-bold text-custom-white/90">{title}</h3>
-    <p class="text-custom-gray mt-1">{description}</p>
+
+  <!-- Skill tags -->
+  <div class="flex flex-wrap gap-2 relative z-10">
+    {tags.map((tag) => (
+      <span class="text-xs px-3 py-1 rounded-full bg-custom-white/5 text-custom-white/60 border border-custom-white/10">
+        {tag}
+      </span>
+    ))}
   </div>
-</a>
+</div>

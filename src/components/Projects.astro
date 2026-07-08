@@ -2,21 +2,51 @@
 import ProjectCard from './ProjectCard.astro';
 
 const projects = [
-  { name: "Phincon Attendance App", description: "VIP Clean Architecture.", imgSrc: "https://via.placeholder.com/400x225" },
-  { name: "Game Katalog", description: "Dicoding iOS Certification.", imgSrc: "https://via.placeholder.com/400x225" },
-  { name: "Smart Care", description: "IoT Health App (3rd Place OLIVIA 2019).", imgSrc: "https://via.placeholder.com/400x225" },
-  { name: "Shape You", description: "Android Fitness App published on PlayStore.", imgSrc: "https://via.placeholder.com/400x225" },
-  { name: "Cegah Covid-19", description: "Web and Android application.", imgSrc: "https://via.placeholder.com/400x225" }
+  {
+    name: "Wondr by BNI",
+    description: "Large-scale banking app — feature development and production stability as PGLS sub-lead.",
+    emoji: "🏦",
+    tags: ["Swift", "VIPER", "RxSwift", "Crashlytics", "Jenkins"],
+  },
+  {
+    name: "Phincon Attendance",
+    description: "Enterprise attendance app built with VIP Clean Architecture.",
+    emoji: "📋",
+    tags: ["Swift", "VIP", "Clean Architecture", "MVVM"],
+  },
+  {
+    name: "Game Katalog",
+    description: "iOS game catalog app — Dicoding iOS Developer Expert certification project.",
+    emoji: "🎮",
+    tags: ["SwiftUI", "Combine", "Core Data", "TCA"],
+  },
+  {
+    name: "Smart Care",
+    description: "IoT health monitoring app — 3rd Place at OLIVIA 2019 competition.",
+    emoji: "❤️‍🩹",
+    tags: ["Swift", "IoT", "Bluetooth LE", "HealthKit"],
+  },
+  {
+    name: "Shape You",
+    description: "Fitness tracking app published on Google Play Store.",
+    emoji: "💪",
+    tags: ["Java", "Android", "Firebase", "Google Fit"],
+  },
+  {
+    name: "Cegah Covid-19",
+    description: "Web and Android application for COVID-19 information and prevention.",
+    emoji: "🛡️",
+    tags: ["PHP Laravel", "Android", "SQL", "REST API"],
+  },
 ];
 ---
 
 <section id="projects" class="scroll-anim">
-  <div class="section-panel">
-    <h2 class="text-4xl font-bold mb-12 text-custom-white/90">Featured Works</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-      {projects.map(p => (
-        <ProjectCard title={p.name} description={p.description} imgSrc={p.imgSrc} />
-      ))}
-    </div>
+  <h2 class="text-sm tracking-[0.3em] uppercase text-custom-gray mb-8 font-light">Featured Works</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {projects.map((p) => (
+      <ProjectCard title={p.name} description={p.description} emoji={p.emoji} tags={p.tags} />
+    ))}
   </div>
 </section>
