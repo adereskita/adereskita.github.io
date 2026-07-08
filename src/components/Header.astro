@@ -1,11 +1,21 @@
 ---
 ---
-<header class="h-screen flex flex-col justify-center items-center text-center">
-  <h1 class="text-7xl md:text-9xl font-black uppercase">Ade Reskita</h1>
-  <p class="text-xl md:text-2xl text-custom-gray mt-4">Principal iOS Engineer</p>
-  <nav class="flex space-x-6 mt-8">
-    <a href="mailto:ade.reskita@gmail.com" class="hover:text-custom-gray transition-colors">Email</a>
-    <a href="https://linkedin.com/in/adereskita" target="_blank" class="hover:text-custom-gray transition-colors">LinkedIn</a>
-    <a href="https://github.com/adereskita" target="_blank" class="hover:text-custom-gray transition-colors">GitHub</a>
-  </nav>
+<header class="h-screen flex flex-col justify-center items-center text-center relative px-4">
+  <!-- Thin top line: role context -->
+  <p class="text-sm tracking-[0.3em] uppercase text-custom-gray mb-6 font-light">Principal iOS Engineer</p>
+
+  <!-- Large name — lock screen clock style -->
+  <h1 class="text-7xl sm:text-8xl md:text-9xl font-black tracking-tight leading-none">
+    Ade Reskita
+  </h1>
+
+  <!-- Tagline -->
+  <p class="text-lg md:text-xl text-custom-gray/80 mt-6 max-w-md font-light leading-relaxed">
+    Building polished mobile experiences with Swift, SwiftUI, and clean architecture.
+  </p>
+
+  <!-- Scroll indicator — iOS home bar style -->
+  <div class="absolute bottom-10 scroll-indicator">
+    <div class="w-8 h-1 bg-custom-white/30 rounded-full mx-auto"></div>
+  </div>
 </header>
