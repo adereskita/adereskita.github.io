@@ -11,7 +11,9 @@
       "mcp__plugin_playwright_playwright__browser_take_screenshot",
       "Bash(curl -s http://localhost:4321)",
       "mcp__plugin_playwright_playwright__browser_console_messages",
-      "mcp__plugin_playwright_playwright__browser_run_code_unsafe"
+      "mcp__plugin_playwright_playwright__browser_run_code_unsafe",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs kill -9)"
     ]
   }
 }

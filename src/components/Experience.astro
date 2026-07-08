@@ -5,9 +5,13 @@ const experiences = [
     role: "iOS Developer",
     period: "2023 – Present",
     details: [
-      "Developing new features and enhancing Wondr by BNI app, a large-scale banking application.",
-      "Sub-lead of PGLS iOS team — improving production stability, handling Crashlytics issues and production bugs.",
-      "Implementing VIPER for modular, scalable, and testable architecture.",
+      "Developing new Features and enhancing Wondr by BNI app, a large-scale banking application.",
+      "Responsible as sub-lead of PGLS (Post Go-Live Support) iOS team, improving production stability and resolving incidents by handling Crashlytics issues, and production bugs.",
+      "Implementing VIPER to maintain modular, better scalability, and testable architecture.",
+      "Refactored legacy modules to improve code readability, maintainability and app performance.",
+      "Collaborating across Product, Design, Scrum, QA, L2,Android and Backend teams.",
+      "Conduct RnD for Liveness and POC Components",
+      "Migrating dependencies from CocoaPods to Swift Package Manager.",
     ],
     highlight: true,
   },
@@ -15,6 +19,11 @@ const experiences = [
     company: "PT PHINCON",
     role: "iOS Developer",
     period: "2022 – 2023",
+    details: [],
+    highlight: true,
+  },
+  {
+    role: "MyTelkomsel",
     details: [
       "Delivered features and migrated from MVC to MVVM with RxSwift.",
       "Increased unit test coverage to 80% for business logic.",
@@ -22,6 +31,15 @@ const experiences = [
     ],
     highlight: false,
   },
+  {
+    role: "Good Doctor",
+    details: [
+      "Delivered features and migrated from MVC to MVVM with RxSwift.",
+      "Increased unit test coverage to 80% for business logic.",
+      "Integrated Google Analytics for data-driven decisions.",
+    ],
+    highlight: false,
+  }
 ];
 ---
 
@@ -31,7 +49,7 @@ const experiences = [
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {experiences.map((exp) => (
       <div class:list={[
-        "glass-panel p-8 flex flex-col",
+        "glass-panel p-12 flex flex-col",
         exp.highlight && "md:col-span-2"
       ]}>
         <div class="flex items-start justify-between mb-4">
@@ -41,7 +59,7 @@ const experiences = [
           </div>
           <span class="text-gray-400 text-sm whitespace-nowrap ml-4">{exp.period}</span>
         </div>
-        <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+        <ul class="space-y-2 text-white/70 text-sm leading-relaxed mt-4">
           {exp.details.map((detail) => (
             <li class="flex gap-2">
               <span class="text-gray-400/50 mt-1 shrink-0">·</span>
