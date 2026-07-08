@@ -1,6 +1,6 @@
 import { scroll, animate, stagger } from "motion";
 
-document.addEventListener("astro:page-load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Animate each section as it scrolls into view
   document.querySelectorAll(".scroll-anim").forEach((section) => {
     // The section itself fades in

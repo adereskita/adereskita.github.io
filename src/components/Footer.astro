@@ -14,7 +14,7 @@ const links = [
         href={link.href}
         target={link.href.startsWith("mailto") ? undefined : "_blank"}
         rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-        class="glass-card px-5 py-3 flex items-center gap-2 text-sm text-custom-white/80 hover:text-custom-white transition-colors relative overflow-hidden"
+        class="glass-card px-5 py-3 flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors relative overflow-hidden"
       >
         <div class="glare"></div>
         <span>{link.icon}</span>
@@ -23,5 +23,5 @@ const links = [
     ))}
   </div>
 
-  <p class="text-custom-gray/40 text-xs">© 2026 Ade Reskita</p>
+  <p class="text-gray-400/40 text-xs">© 2026 Ade Reskita</p>
 </footer>

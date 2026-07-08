@@ -42,9 +42,9 @@ const projects = [
 ---
 
 <section id="projects" class="scroll-anim">
-  <h2 class="text-sm tracking-[0.3em] uppercase text-custom-gray mb-8 font-light">Featured Works</h2>
+  <h2 class="text-sm tracking-[0.3em] uppercase text-gray-400 mb-8 font-light">Featured Works</h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {projects.map((p) => (
       <ProjectCard title={p.name} description={p.description} emoji={p.emoji} tags={p.tags} />
     ))}

@@ -1,4 +1,4 @@
-document.addEventListener("astro:page-load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".glass-card");
 
   cards.forEach((card) => {
