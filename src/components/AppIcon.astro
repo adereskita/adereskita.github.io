@@ -1,0 +1,9 @@
+---
+const { label, icon, target } = Astro.props;
+---
+<a href={target} class="flex flex-col items-center gap-2 text-center transition-transform hover:scale-110">
+  <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center text-4xl shadow-lg">
+    <Fragment set:html={icon} />
+  </div>
+  <span class="text-sm font-medium">{label}</span>
+</a>

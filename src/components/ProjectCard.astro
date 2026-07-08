@@ -1,0 +1,12 @@
+---
+const { title, description, imgSrc } = Astro.props;
+---
+<a href="#" class="group">
+  <div class="overflow-hidden rounded-lg">
+    <img src={imgSrc} alt={title} class="w-full h-auto aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" />
+  </div>
+  <div class="mt-4">
+    <h3 class="text-xl font-bold text-custom-white/90">{title}</h3>
+    <p class="text-custom-gray mt-1">{description}</p>
+  </div>
+</a>

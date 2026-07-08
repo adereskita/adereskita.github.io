@@ -1,0 +1,22 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+const projects = [
+  { name: "Phincon Attendance App", description: "VIP Clean Architecture.", imgSrc: "https://via.placeholder.com/400x225" },
+  { name: "Game Katalog", description: "Dicoding iOS Certification.", imgSrc: "https://via.placeholder.com/400x225" },
+  { name: "Smart Care", description: "IoT Health App (3rd Place OLIVIA 2019).", imgSrc: "https://via.placeholder.com/400x225" },
+  { name: "Shape You", description: "Android Fitness App published on PlayStore.", imgSrc: "https://via.placeholder.com/400x225" },
+  { name: "Cegah Covid-19", description: "Web and Android application.", imgSrc: "https://via.placeholder.com/400x225" }
+];
+---
+
+<section id="projects" class="scroll-anim">
+  <div class="section-panel">
+    <h2 class="text-4xl font-bold mb-12 text-custom-white/90">Featured Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+      {projects.map(p => (
+        <ProjectCard title={p.name} description={p.description} imgSrc={p.imgSrc} />
+      ))}
+    </div>
+  </div>
+</section>

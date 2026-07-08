@@ -1,0 +1,27 @@
+---
+const skills = {
+  "Frameworks/Libraries": ["Swift", "SwiftUI", "RxSwift", "Combine", "Texture UI", "Java", "Python", "PHP Laravel", "SQL"],
+  "Architecture": ["VIPER", "MVVM", "TCA", "MVC", "VIP", "Clean Architecture"],
+  "Tools": ["XCTest", "CocoaPods", "SPM", "Git", "Xcodegen", "Figma", "Google Analytics", "Jenkins", "Agentic AI and AI powered IDE"]
+};
+---
+
+<section id="skills" class="scroll-anim">
+  <div class="section-panel">
+    <h2 class="text-4xl font-bold mb-12 text-custom-white/90">Skills</h2>
+    <div class="flex flex-col gap-8">
+      {Object.entries(skills).map(([category, skillList]) => (
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-custom-white/80">{category}</h3>
+          <div class="flex flex-wrap gap-3">
+            {skillList.map(skill => (
+              <span class="bg-custom-white/10 text-custom-white/80 px-4 py-2 rounded-full">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
