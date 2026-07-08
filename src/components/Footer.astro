@@ -1,0 +1,27 @@
+---
+const links = [
+  { label: "Email", href: "mailto:ade.reskita@gmail.com", icon: "✉️" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/adereskita", icon: "💼" },
+  { label: "GitHub", href: "https://github.com/adereskita", icon: "🐙" },
+];
+---
+
+<footer class="py-12 px-4 text-center">
+  <!-- Dock-style links -->
+  <div class="flex justify-center gap-6 mb-8">
+    {links.map((link) => (
+      <a
+        href={link.href}
+        target={link.href.startsWith("mailto") ? undefined : "_blank"}
+        rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+        class="glass-card px-5 py-3 flex items-center gap-2 text-sm text-custom-white/80 hover:text-custom-white transition-colors relative overflow-hidden"
+      >
+        <div class="glare"></div>
+        <span>{link.icon}</span>
+        <span class="relative z-10">{link.label}</span>
+      </a>
+    ))}
+  </div>
+
+  <p class="text-custom-gray/40 text-xs">© 2026 Ade Reskita</p>
+</footer>
