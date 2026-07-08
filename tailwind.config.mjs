@@ -1,14 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {
-			colors: {
-				'custom-black': 'var(--black)',
-				'custom-white': 'var(--white)',
-				'custom-gray': 'var(--gray)',
-			},
-		},
-	},
-	plugins: [],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {
+      colors: {
+        'custom-black': '#0b0b0f',
+        'custom-white': '#f5f5f7',
+        'custom-gray': '#808080',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
 }
