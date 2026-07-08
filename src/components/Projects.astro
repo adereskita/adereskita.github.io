@@ -1,17 +1,20 @@
 ---
 import ProjectCard from './ProjectCard.astro';
+import wondrIcon from '../assets/wondr-icon.png';
+import mytelkomselIcon from '../assets/mytelkomsel-icon.png';
+import chatajaIcon from '../assets/chataja-icon.jpg';
 
 const projects = [
   {
     name: "Wondr by BNI",
     description: "Large scale banking app feature development and production stability as PGLS sub lead.",
-    image: "/src/assets/wondr-icon.png",
+    image: wondrIcon,
     tags: ["Swift", "Modular", "VIPER", "RxSwift", "Crashlytics", "Jenkins"],
   },
     {
     name: "MyTelkomsel",
     description: "Enterprise attendance app built with VIP Clean Architecture.",
-    image: "/src/assets/mytelkomsel-icon.png",
+    image: mytelkomselIcon,
     tags: ["Swift", "MVVM", "MVC", "RxSwift", "Analytics"],
   },
   {
@@ -23,7 +26,7 @@ const projects = [
     {
     name: "ChatAja!",
     description: "Enterprise attendance app built with VIP Clean Architecture.",
-    image: "/src/assets/chataja-icon.jpg",
+    image: chatajaIcon,
     tags: ["Swift", "VIPER", "Reactive Programming"],
   },
   {
@@ -58,7 +61,7 @@ const projects = [
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {projects.map((p) => (
-      <ProjectCard title={p.name} description={p.description} emoji={p.emoji} image={p.image} tags={p.tags} />
+      <ProjectCard title={p.name} description={p.description} emoji={p.emoji} image={p.image?.src} tags={p.tags} />
     ))}
   </div>
 </section>
