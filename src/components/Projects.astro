@@ -4,27 +4,39 @@ import ProjectCard from './ProjectCard.astro';
 const projects = [
   {
     name: "Wondr by BNI",
-    description: "Large-scale banking app — feature development and production stability as PGLS sub-lead.",
-    emoji: "🏦",
-    tags: ["Swift", "VIPER", "RxSwift", "Crashlytics", "Jenkins"],
+    description: "Large scale banking app feature development and production stability as PGLS sub lead.",
+    image: "/src/assets/wondr-icon.png",
+    tags: ["Swift", "Modular", "VIPER", "RxSwift", "Crashlytics", "Jenkins"],
+  },
+    {
+    name: "MyTelkomsel",
+    description: "Enterprise attendance app built with VIP Clean Architecture.",
+    image: "/src/assets/mytelkomsel-icon.png",
+    tags: ["Swift", "MVVM", "MVC", "RxSwift", "Analytics"],
   },
   {
     name: "Phincon Attendance",
     description: "Enterprise attendance app built with VIP Clean Architecture.",
     emoji: "📋",
-    tags: ["Swift", "VIP", "Clean Architecture", "MVVM"],
+    tags: ["Swift", "VIP", "Clean Architecture"],
+  },
+    {
+    name: "ChatAja!",
+    description: "Enterprise attendance app built with VIP Clean Architecture.",
+    image: "/src/assets/chataja-icon.jpg",
+    tags: ["Swift", "VIPER", "Reactive Programming"],
   },
   {
     name: "Game Katalog",
-    description: "iOS game catalog app — Dicoding iOS Developer Expert certification project.",
+    description: "iOS game catalog app Dicoding iOS Developer Expert certification project.",
     emoji: "🎮",
-    tags: ["SwiftUI", "Combine", "Core Data", "TCA"],
+    tags: ["Swift", "Combine", "Core Data", "Clean Architecture"],
   },
   {
     name: "Smart Care",
-    description: "IoT health monitoring app — 3rd Place at OLIVIA 2019 competition.",
+    description: "IoT health monitoring app 3rd Place at OLIVIA 2019 competition.",
     emoji: "❤️‍🩹",
-    tags: ["Swift", "IoT", "Bluetooth LE", "HealthKit"],
+    tags: ["Web & Mobile", "IoT", "Bluetooth", "HealthKit", "Arduino"],
   },
   {
     name: "Shape You",
@@ -46,7 +58,7 @@ const projects = [
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {projects.map((p) => (
-      <ProjectCard title={p.name} description={p.description} emoji={p.emoji} tags={p.tags} />
+      <ProjectCard title={p.name} description={p.description} emoji={p.emoji} image={p.image} tags={p.tags} />
     ))}
   </div>
 </section>

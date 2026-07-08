@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -o src/assets/chataja-icon.jpg https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTJsUXYca7jcq25o42xBbAfOivQkK97ZH3lfUbCt5lAaObkRME1sjBnakR)",
+      "Bash(git remote *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

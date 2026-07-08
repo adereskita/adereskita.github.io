@@ -4,20 +4,21 @@ import AppIcon from './AppIcon.astro';
 interface Props {
   title: string;
   description: string;
-  emoji: string;
+  emoji?: string;
+  image?: string;
   tags: string[];
 }
 
-const { title, description, emoji, tags } = Astro.props;
+const { title, description, emoji, image, tags } = Astro.props;
 ---
 
-<div class="glass-card p-12 relative overflow-hidden group cursor-default">
+<div class="glass-card p-8 relative overflow-hidden group cursor-default">
   <!-- Glare overlay -->
   <div class="glare"></div>
 
   <!-- App icon + info -->
   <div class="flex items-start gap-4 mb-4 relative z-10">
-    <AppIcon emoji={emoji} />
+    {image ? <img src={image} alt={title} class="w-12 h-12 rounded-lg" /> : <AppIcon emoji={emoji} />}
     <div class="min-w-0">
       <h3 class="text-xl font-semibold text-white truncate">{title}</h3>
       <p class="text-gray-400 text-sm mt-1 leading-relaxed">{description}</p>

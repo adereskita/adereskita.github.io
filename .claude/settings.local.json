@@ -13,7 +13,10 @@
       "mcp__plugin_playwright_playwright__browser_console_messages",
       "mcp__plugin_playwright_playwright__browser_run_code_unsafe",
       "Bash(awk '{print $2}')",
-      "Bash(xargs kill -9)"
+      "Bash(xargs kill -9)",
+      "Bash(curl -o src/assets/mytelkomsel-icon.png https://play-lh.googleusercontent.com/urOYiexeraZb6Eht8TLA4zqCV7WT7sOPOztH5M_LvFvFQ0cMcrAxFW9YlS0L-fZyBF_oTJ1KTYU_PSP2A_fp_Q)",
+      "Bash(curl -o src/assets/wondr-icon.png https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr5oO70D2oXtKhKbl3avbld2Kd33XU7s6gRGqR7NomHA)",
+      "Bash(curl -o src/assets/chataja-icon.jpg https://static.tek.id/2020/05/06/29139/chataja-aplikasi-pesan-instan-yang-multifungsi-gvGDuVehWd.jpg)"
     ]
   }
 }

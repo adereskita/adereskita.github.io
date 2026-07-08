@@ -4,42 +4,75 @@ const experiences = [
     company: "PT MITRA INTEGRASI INFORMATIKA",
     role: "iOS Developer",
     period: "2023 – Present",
-    details: [
-      "Developing new Features and enhancing Wondr by BNI app, a large-scale banking application.",
-      "Responsible as sub-lead of PGLS (Post Go-Live Support) iOS team, improving production stability and resolving incidents by handling Crashlytics issues, and production bugs.",
-      "Implementing VIPER to maintain modular, better scalability, and testable architecture.",
-      "Refactored legacy modules to improve code readability, maintainability and app performance.",
-      "Collaborating across Product, Design, Scrum, QA, L2,Android and Backend teams.",
-      "Conduct RnD for Liveness and POC Components",
-      "Migrating dependencies from CocoaPods to Swift Package Manager.",
+    projects: [
+      {
+        name: "Wondr by BNI",
+        details: [
+          "Developing new Features and enhancing Wondr by BNI app, a large-scale banking application.",
+          "Responsible as sub-lead of PGLS (Post Go-Live Support) iOS team, improving production stability and resolving incidents by handling Crashlytics issues, and production bugs.",
+          "Implementing VIPER to maintain modular, better scalability, and testable architecture.",
+          "Refactored legacy modules to improve code readability, maintainability and app performance.",
+          "Collaborating across Product, Design, Scrum, QA, L2,Android and Backend teams.",
+          "Conduct RnD for Liveness and POC Components",
+          "Migrating dependencies from CocoaPods to Swift Package Manager.",
+        ],
+      },
     ],
     highlight: true,
   },
   {
     company: "PT PHINCON",
     role: "iOS Developer",
-    period: "2022 – 2023",
-    details: [],
+    period: "Mar 2022 – Oct 2023",
+    projects: [
+      {
+        name: "MyTelkomsel",
+        details: [
+          "Delivered new features and enhancements from MVC to MVVM and RxSwift.",
+          "Increased unit test coverage to 80% for business logic.",
+          "Integrated Google Analytics for data-driven decisions.",
+          "Fixed production issues and collaborated in Agile sprints",
+        ],
+      },
+      {
+        name: "Good Doctor",
+        details: [
+          "Developed the app from scratch using RxSwift Reactive Programming, Texture UI, and TCA.",
+          "Implemented Google Maps, Places Search, and location picker.",
+          "Contributed to core UI, localization, networking, and state management. ",
+        ],
+      },
+    ],
     highlight: true,
   },
   {
-    role: "MyTelkomsel",
-    details: [
-      "Delivered features and migrated from MVC to MVVM with RxSwift.",
-      "Increased unit test coverage to 80% for business logic.",
-      "Integrated Google Analytics for data-driven decisions.",
+    company: "ChatAja Indonesia",
+    role: "iOS Developer Intern",
+    period: "Jan 2020 – Aug 2020",
+    projects: [
+      {
+        name: "ChatAja!",
+        details: [
+          "Worked on bug fixes, feature enhancements, and TestFlight deployment.",
+          "Learned VIPER and applied clean architectural principles.",
+        ],
+      },
     ],
     highlight: false,
   },
   {
-    role: "Good Doctor",
-    details: [
-      "Delivered features and migrated from MVC to MVVM with RxSwift.",
-      "Increased unit test coverage to 80% for business logic.",
-      "Integrated Google Analytics for data-driven decisions.",
+    company: "Mata Merah Studio",
+    role: "Web Developer Intern",
+    period: "Jun 2019 – Aug 2019",
+    projects: [
+      {
+        details: [
+          "Built backend features using Laravel and supported frontend with TailwindCSS.",
+        ],
+      },
     ],
     highlight: false,
-  }
+  },
 ];
 ---
 
@@ -48,25 +81,41 @@ const experiences = [
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {experiences.map((exp) => (
-      <div class:list={[
-        "glass-panel p-12 flex flex-col",
-        exp.highlight && "md:col-span-2"
-      ]}>
+      <div class:list={["glass-panel p-8 flex flex-col", exp.highlight && "md:col-span-2"]}>
         <div class="flex items-start justify-between mb-4">
           <div>
-            <h3 class="text-xl font-semibold text-white">{exp.role}</h3>
-            <p class="text-gray-400 text-sm mt-1">{exp.company}</p>
+            <h3 class="text-xl font-semibold text-white">{exp.company ?? exp.role}</h3>
+            {exp.company && <p class="text-gray-400 text-sm mt-1">{exp.role}</p>}
           </div>
-          <span class="text-gray-400 text-sm whitespace-nowrap ml-4">{exp.period}</span>
+          {exp.period && <span class="text-gray-400 text-sm whitespace-nowrap ml-4">{exp.period}</span>}
         </div>
-        <ul class="space-y-2 text-white/70 text-sm leading-relaxed mt-4">
-          {exp.details.map((detail) => (
-            <li class="flex gap-2">
-              <span class="text-gray-400/50 mt-1 shrink-0">·</span>
-              <span>{detail}</span>
-            </li>
-          ))}
-        </ul>
+
+        <div class="mt-4 flex flex-col gap-6">
+          {exp.projects && exp.projects.length > 0 ? (
+            exp.projects.map((project) => (
+              <div class="border-l-2 border-white/10 pl-6">
+                <h4 class="font-semibold text-white/80">{project.name}</h4>
+                <ul class="space-y-2 text-white/70 text-sm leading-relaxed mt-2">
+                  {project.details.map((detail) => (
+                    <li class="flex gap-2">
+                      <span class="text-gray-400/50 mt-1 shrink-0">⏺</span>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          ) : (
+            <ul class="space-y-2 text-white/70 text-sm leading-relaxed mt-4">
+              {exp.details && exp.details.map((detail) => (
+                <li class="flex gap-2">
+                  <span class="text-gray-400/50 mt-1 shrink-0">⏺</span>
+                  <span>{detail}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
     ))}
   </div>
