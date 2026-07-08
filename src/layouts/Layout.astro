@@ -1,7 +1,5 @@
 ---
 import '../styles/global.css';
-import '../scripts/animations.js';
-import '../scripts/tilt.js';
 
 interface Props {
   title: string;
@@ -33,5 +31,7 @@ const { title } = Astro.props;
       <slot />
     </div>
 
+    <script is:inline src="../scripts/animations.js"></script>
+    <script is:inline src="../scripts/tilt.js"></script>
   </body>
 </html>
